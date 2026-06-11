@@ -1,5 +1,5 @@
 const WORKER_OVERRIDE=new URLSearchParams(location.search).get("worker")||"";
-const WORKER_URL=WORKER_OVERRIDE||location.origin+"/robloxassets";
+const WORKER_URL=WORKER_OVERRIDE||"https://skybox-proxy.nohanpisano5.workers.dev/robloxassets";
 const FACE_ORDER=["Right","Left","Front","Back","Up","Down"];
 const FACE_SHORT={Right:"Rt",Left:"Lf",Front:"Ft",Back:"Bk",Up:"Up",Down:"Dn"};
 const faces={};
