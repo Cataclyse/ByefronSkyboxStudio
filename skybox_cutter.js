@@ -333,7 +333,7 @@ async function uploadAll(){
     try{
       const blob=await new Promise(r=>faces[face].toBlob(r,"image/png"));
       const imgBuf=await blob.arrayBuffer();
-      const jsonPart=JSON.stringify({assetType:"Image",displayName:`${preset}_${FACE_SHORT[face]}`.slice(0,50),description:"Skybox face",creationContext:{creator:{userId},assetPrivacy:"openUse"});
+      const jsonPart=JSON.stringify({assetType:"Image",displayName:`${preset}_${FACE_SHORT[face]}`.slice(0,50),description:"Skybox face",creationContext:{creator:{userId},assetPrivacy:"openUse"}});
       const boundary="----BF"+Date.now()+i;
       const enc=new TextEncoder();
       const parts=[
@@ -850,7 +850,7 @@ async function batchUploadAll(){
       try{
         const blob=await new Promise(r=>item.faces[face].toBlob(r,"image/png"));
         const imgBuf=await blob.arrayBuffer();
-        const jsonPart=JSON.stringify({assetType:"Image",displayName:`${preset}_${FACE_SHORT[face]}`.slice(0,50),description:"Skybox face",creationContext:{creator:{userId},assetPrivacy:"openUse"});
+        const jsonPart=JSON.stringify({assetType:"Image",displayName:`${preset}_${FACE_SHORT[face]}`.slice(0,50),description:"Skybox face",creationContext:{creator:{userId},assetPrivacy:"openUse"}});
         const boundary="----BF"+Date.now()+i;
         const enc=new TextEncoder();
         const parts=[
