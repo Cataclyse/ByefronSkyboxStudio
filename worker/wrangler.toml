@@ -4,9 +4,6 @@ compatibility_date = "2025-04-01"
 workers_dev = true
 
 routes = [
-  { pattern = "skybox.cataclyse.xyz/*", zone_name = "cataclyse.xyz" },
+  { pattern = "skybox.cataclyse.xyz/robloxassets/*", zone_name = "cataclyse.xyz" },
+  { pattern = "skybox.cataclyse.xyz/thumbnails/*", zone_name = "cataclyse.xyz" },
 ]
-
-[assets]
-directory = ".."
-binding = "ASSETS"

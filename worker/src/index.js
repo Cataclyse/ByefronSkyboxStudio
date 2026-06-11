@@ -48,7 +48,7 @@ async function proxyRequest(request, targetUrl) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request) {
     const url = new URL(request.url);
     const origin = request.headers.get('Origin') || '';
     const path = url.pathname;
@@ -72,6 +72,6 @@ export default {
       return proxyRequest(request, targetUrl);
     }
 
-    return env.ASSETS.fetch(request);
+    return new Response('Not Found', { status: 404 });
   },
 };
