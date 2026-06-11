@@ -1,4 +1,12 @@
 name = "skybox-proxy"
 main = "src/index.js"
 compatibility_date = "2025-04-01"
-account_id = "abbe8aaa3efa49cb4b19ede71ee08ad9"
+
+routes = [
+  { pattern = "skybox.cataclyse.xyz/*", zone_name = "cataclyse.xyz" },
+]
+
+[assets]
+directory = ".."
+binding = "ASSETS"
+exclude = [".git/**", ".wrangler/**", "worker/**", ".cataclyse/**"]
